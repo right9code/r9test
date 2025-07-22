@@ -1,5 +1,5 @@
 #!/bin/bash
-DISK="/dev/nvme0n1"
+DISK="/dev/vda"
 # For non-dual-boot (fresh install), uncomment the line below to wipe the disk and create a new GPT:
 # parted -s "$DISK" mklabel gpt
 parted -s "$DISK" mkpart primary fat32 0% 512MiB
