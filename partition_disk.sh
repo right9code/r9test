@@ -1,4 +1,6 @@
 #!/bin/bash
+set -eux # <--- ADDED FOR DEBUGGING
+
 # IMPORTANT: Confirm your VM's disk is /dev/vda, otherwise change this line.
 DISK="/dev/vda" # <--- CONFIRMED FROM YOUR LSBLK OUTPUT
 
