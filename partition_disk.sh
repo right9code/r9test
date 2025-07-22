@@ -5,7 +5,7 @@ set -eux # <--- ADDED FOR DEBUGGING
 DISK="/dev/vda" # <--- CONFIRMED FROM YOUR LSBLK OUTPUT
 
 # For non-dual-boot (fresh install), uncomment the line below to wipe the disk and create a new GPT:
-# parted -s "$DISK" mklabel gpt
+parted -s "$DISK" mklabel gpt
 
 # Creating the EFI partition with more precise start/end values (1MiB offset for alignment)
 parted -s "$DISK" mkpart primary fat32 1MiB 513MiB
